@@ -1,0 +1,63 @@
+﻿@page "/Example/XButton"
+
+
+<XButton
+    Disabled="Disabled"
+>
+    this is a XButton
+</XButton>
+
+
+<br>
+<br>
+
+Disabled :
+<button @onclick="SwitchValue"> @Disabled </button>
+
+<br>
+<br>
+
+
+
+@code {
+     private bool Disabled { get; set; }
+     private void SwitchValue()
+     {
+         Disabled = !Disabled;
+     }
+}
+
+
+
+<table>
+  <colgroup span="3"></colgroup>
+    @* --------------------------------- *@
+    <tr>
+        <td>属性 </td>
+        <td> 类型</td>
+        <td> 值 </td>
+    </tr>
+    @* --------------------------------- *@
+    <tr>
+        <td> Disabled </td>
+        <td> bool</td>
+        <td> True/False </td>
+    </tr>
+    @* --------------------------------- *@
+</table>
+
+<style>
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0px;
+    }
+
+    table,
+    th,
+    td {
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+</style>
